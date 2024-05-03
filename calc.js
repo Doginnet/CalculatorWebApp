@@ -47,7 +47,7 @@ function calculate() {
   num2 = 0;
 }
 
-export function enterNumbers() {
+ function enterNumbers() {
   let buffNum = this.textContent; //buffer number for the display
   if (num1 === undefined) {
     //if the first number already entered go to else
