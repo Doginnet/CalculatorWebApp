@@ -5,46 +5,46 @@
   <meta charset="UTF-8" />
   <meta viewport="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
- 
 </head>
 
 <body>
-    <h1>Niggerlator</h1>
-    
-    <div class="container">
-        <div class="calculator">
-            <div class="display"></div>
-            <div class="numPad">
-                <div class="numRow" id="numRow1">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                </div>
-                <div class="numRow" id="numRow2">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                </div>
-                <div class="numRow" id="numRow3">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <br>
-                    <button id="zero">0</button>
-                </div>
-            </div>
-            <div class="operators">
-        <button id="add">+</button>
-        <button id="subtract">-</button>
-        <button id="multiply">*</button>
-        <button id="divide">/</button>
-    </div>
-    <div class="">
+  <h1>Niggerlator</h1>
+
+  <div class="container">
+    <div class="calculator">
+      <div class="display"></div>
+      <div class="controls">
+        <div class="numPad">
+          <div class="numRow" id="numRow1">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+          </div>
+          <div class="numRow" id="numRow2">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+          </div>
+          <div class="numRow" id="numRow3">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <br />
+            <button id="zero">0</button>
+          </div>
+        </div>
+        <div class="operators">
+          <button id="add">+</button>
+          <button id="subtract">-</button>
+          <button id="multiply">*</button>
+          <button id="divide">/</button>
+        </div>
+      </div>
+      <div class="operationButtons">
         <button class="calculate">Calculate</button>
         <button class="reset" onclick="reset()">CE</button>
-        
+      </div>
     </div>
-</div>
-</div>
-<script src="calc.js"></script>
+  </div>
+  <script src="calc.js"></script>
 </body>

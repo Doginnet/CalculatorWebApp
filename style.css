@@ -1,17 +1,18 @@
 body {
-    background: linear-gradient(90deg, rgb(58, 106, 151), rgb(1, 36, 90));
+    background: linear-gradient(90deg, rgb(32, 37, 41), rgb(43, 46, 49));
     text-align: center;
 }
 
 h1 {
-    color: orange;
-    
+    color: rgba(218, 215, 215, 0.76);
+    font-style: oblique;
+    font-stretch: expanded;
     font-family: sans-serif;
     width: fit-content;
     height: fit-content;
     margin: auto;
     
-    text-shadow: 1px 1px 4px orange;
+    text-shadow: 2px 2px 3px rgb(136, 133, 132);
 }
 
 .container {
@@ -21,7 +22,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     
-    width: 250px;
+    width: 200px;
     height: fit-content;
     padding: 0px;
     transform: scale(1.9);
@@ -30,12 +31,14 @@ h1 {
 .calculator {
     background-color: rgb(63, 62, 62);
     border-radius: 5px;
+    
 }
 
 .display {
     font-family:  Arial, sans-serif;
    /* background-color: rgba(59, 59, 59, 0.5); */
-   box-shadow: 1px 1px 15px rgb(87, 86, 86);
+   border-bottom: 1px solid rgb(196, 189, 189);
+   box-shadow: 1px 1px 15px rgb(43, 42, 42);
     color: whitesmoke;
     font-size: 17px;
     text-align: end;
@@ -44,11 +47,15 @@ h1 {
     margin-bottom: 5px;
     
     
-    border-radius: 3px;
+    border-radius: 0px;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
 }
 
 .numPad {
-    border: 1px solid red;
+  /*  border: 1px solid red; */
     text-align: start;
     width: fit-content;
 }
@@ -67,10 +74,16 @@ button {
     display: flex;
     flex-direction: column;
     align-items: end;
-    border: 1px solid blue;
+  /*  border: 1px solid blue; */
     width: fit-content;
-    margin-left: 81%;
-    margin-top: 0%;
+  
+}
+
+.operationButtons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 5px;
 }
 
 .calculate {
