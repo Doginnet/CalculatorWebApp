@@ -22,28 +22,32 @@ let operator;
 
 function calculate() {
   let result;
-//TODO: implement try catch scenario
-  switch (operator) {
-    case "+":
-      result = add(num1, num2);
+  //TODO: implement try catch scenario
+  try {
+    switch (operator) {
+      case "+":
+        result = add(num1, num2);
 
-      break;
-    case "-":
-      result = subtract(num1, num2);
-      break;
-    case "*":
-      result = multiply(num1, num2);
-      break;
-    case "/":
-      result = divide(num1, num2);
-      break;
+        break;
+      case "-":
+        result = subtract(num1, num2);
+        break;
+      case "*":
+        result = multiply(num1, num2);
+        break;
+      case "/":
+        result = divide(num1, num2);
+        break;
+    }
+  } catch (e) {
+    alert(e);
   }
   display.textContent = result;
   num1 = result;
   num2 = 0;
 }
 
-function enterNumbers() {
+export function enterNumbers() {
   let buffNum = this.textContent; //buffer number for the display
   if (num1 === undefined) {
     //if the first number already entered go to else
@@ -52,12 +56,14 @@ function enterNumbers() {
   } else {
     if (num2 === 0) {
       num2 = Number(this.textContent); //TODO: store display.textContent in a variable
-      display.textContent.endsWith('0') ? display.textContent = display.textContent.slice(0, -1) : null
+      display.textContent.endsWith("0")
+        ? (display.textContent = display.textContent.slice(0, -1))
+        : null;
     } else {
-        num2 += this.textContent;
+      num2 += this.textContent;
     }
     display.textContent += buffNum;
-   
+    num2 = Number(num2);
   }
 }
 
